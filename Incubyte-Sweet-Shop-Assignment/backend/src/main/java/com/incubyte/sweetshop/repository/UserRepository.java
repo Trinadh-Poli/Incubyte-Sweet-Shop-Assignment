@@ -1,0 +1,11 @@
+package com.incubyte.sweetshop.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.incubyte.sweetshop.model.User;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByEmail(String email);
+}
